@@ -9,7 +9,7 @@ namespace WindowsFormsApplication1.Figures
     /// <summary>
     /// Rectangle class
     /// </summary>
-    public class Rectangle
+    public class Rectangle : IFigure
     {
         /// <summary>
         /// Initialisation width
@@ -19,6 +19,19 @@ namespace WindowsFormsApplication1.Figures
         /// Initialisation height
         /// </summary>
         private double _height;
+
+        public Rectangle(double _width, double _height)
+        {
+            this._width = _width;
+            this._height = _height;
+        }
+
+        public Rectangle()
+        {
+        }
+
+        //private IFigure _figureImplementation;
+
         /// <summary>
         /// Validation width
         /// </summary>
@@ -59,11 +72,20 @@ namespace WindowsFormsApplication1.Figures
         /// Counting rectangle's area 
         /// </summary>
         /// <returns></returns>
-        public double GetArea()
+        public double Area
         {
-            double area;
-            area = _width * _height;
-            return area;
+            get
+            {
+                double area;
+                area = _width * _height;
+                return area;
+            }
         }
+
+        //double IFigure.Area
+        //{
+        //    get { return _figureImplementation.Area; }
+        //    set { _figureImplementation.Area = value; }
+        //}
     }
 }

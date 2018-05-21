@@ -9,12 +9,21 @@ namespace WindowsFormsApplication1.Figures
     /// <summary>
     /// Circle class
     /// </summary>
-    public class Circle
+    public class Circle : IFigure
     {
         /// <summary>
         /// Initialisation radius
         /// </summary>
         private double _radius;
+
+        public Circle(double radius)
+        {
+            Radius = radius;
+        }
+
+        public Circle()
+        {
+        }
 
         /// <summary>
         /// Validation radius
@@ -39,11 +48,14 @@ namespace WindowsFormsApplication1.Figures
         /// Counting area for circle
         /// </summary>
         /// <returns></returns>
-        public double GetArea()
+        public double Area
         {
-            double area;
-            area = Math.PI * _radius * _radius;
-            return area;
+            get
+            {
+                double area;
+                area = Math.PI * _radius * _radius;
+                return area;
+            }
         }
     }
 }

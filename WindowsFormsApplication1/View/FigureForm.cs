@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApplication1.Figures;
-using Rectangle = WindowsFormsApplication1.Figures.Rectangle;
 
 namespace WindowsFormsApplication1
 {
@@ -21,11 +20,11 @@ namespace WindowsFormsApplication1
         /// <summary>
 		/// Is need to modify figure or not
 		/// </summary>
-		
+		private bool _modifyFigure;
         /// <summary>
 		/// Figure index in data grid inside main form
 		/// </summary>
-		
+		private int _figureIndex;
         public Figure_Form()
         {
             InitializeComponent();
@@ -53,7 +52,7 @@ namespace WindowsFormsApplication1
                 }
                 if (comboBox1.SelectedIndex == 2)
                 {
-                    var rectangle = new Rectangle();
+                    var rectangle = new Figures.Rectangle();
                     rectangle.Height = Convert.ToDouble(textBox1.Text);
                     rectangle.Width = Convert.ToDouble(textBox2.Text);
                     return rectangle;
@@ -64,7 +63,6 @@ namespace WindowsFormsApplication1
             {
 
             }
-           
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

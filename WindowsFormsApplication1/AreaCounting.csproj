@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -53,19 +57,11 @@
       <DependentUpon>FigureForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Figures\Circle.cs" />
-    <Compile Include="Figures\FigureBase.cs" />
-    <Compile Include="Figures\FiguresCollection.cs" />
     <Compile Include="Figures\GeometricFiguresEnum.cs" />
-    <Compile Include="Figures\Interface.cs" />
-    <Compile Include="Figures\RandomFigure.cs" />
     <Compile Include="Figures\Rectangle.cs" />
     <Compile Include="Figures\Triangle.cs" />
-    <Compile Include="FindForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FindForm.Designer.cs">
-      <DependentUpon>FindForm.cs</DependentUpon>
-    </Compile>
+    <Compile Include="FigureType.cs" />
+    <Compile Include="Figures\IFigure.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,9 +72,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FigureForm.resx">
       <DependentUpon>FigureForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FindForm.resx">
-      <DependentUpon>FindForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -92,6 +85,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

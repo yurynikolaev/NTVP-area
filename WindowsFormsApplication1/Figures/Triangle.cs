@@ -9,7 +9,7 @@ namespace WindowsFormsApplication1.Figures
     /// <summary>
     /// Triangle class
     /// </summary>
-    public class Triangle
+    public class Triangle : IFigure
     {
         /// <summary>
         /// Initialisation height
@@ -19,6 +19,22 @@ namespace WindowsFormsApplication1.Figures
         /// Initialization catet
         /// </summary>
         private double _catet;
+
+        public Triangle(double _height, double _catet)
+        {
+            this._height = _height;
+            this._catet = _catet;
+        }
+
+        public Triangle()
+        {
+        }
+
+        //private IFigure _figureImplementation;
+
+        //private IFigure _figureImplementation;
+        //private IFigure _figureImplementation1;
+
         /// <summary>
         /// Validation height
         /// </summary>
@@ -55,15 +71,21 @@ namespace WindowsFormsApplication1.Figures
                 _catet = value;
             }
         }
+
+
+
         /// <summary>
         /// Counting triangle's area
         /// </summary>
         /// <returns></returns>
-        public double GetArea()
+        public double Area
         {
-            double area;
-            area = 0.5 * _catet * _height;
-            return area;
+            get
+            {
+                double area;
+                area = 0.5 * _catet * _height;
+                return area;
+            }
         }
     }
 }

@@ -47,16 +47,16 @@ namespace WindowsFormsApplication1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Figure_Form figureForm = new Figure_Form();
+            FigureForm figureForm = new FigureForm();
             var dialogResult = figureForm.ShowDialog();
             if (dialogResult == DialogResult.OK)
             {
                 var figure = figureForm.Figure;
-                dataGridView1.Rows.Add(figure.ToString().Split('.').Last(), figure.Area);
+                dataFiguresTable.Rows.Add(figure.ToString().Split('.').Last(), figure.Area);
                 _figures.Add(figure);
             }
         }
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataFiguresTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
@@ -73,8 +73,8 @@ namespace WindowsFormsApplication1
 
         private void DeleteFigureButton_Click(object sender, EventArgs e)
         {
-            int CurrentRow = dataGridView1.CurrentRow.Index;
-            dataGridView1.Rows.Remove(dataGridView1.Rows[CurrentRow]);
+            int CurrentRow = dataFiguresTable.CurrentRow.Index;
+            dataFiguresTable.Rows.Remove(dataFiguresTable.Rows[CurrentRow]);
         }
 
        
@@ -115,7 +115,7 @@ namespace WindowsFormsApplication1
             }
             catch (Exception e)
             {
-                MessageBox.Show("Error while writing file. Please contact IT department for immediate assist!");
+                MessageBox.Show(@"Error while writing file. Please contact IT department for immediate assist!");
 
             }
         }
@@ -144,10 +144,10 @@ namespace WindowsFormsApplication1
                     }
 
                 }
-                dataGridView1.Rows.Clear();
+                dataFiguresTable.Rows.Clear();
                 foreach (var figure in _figures)
                 {
-                    dataGridView1.Rows.Add(figure.ToString().Split('.').Last(), figure.Area);
+                    dataFiguresTable.Rows.Add(figure.ToString().Split('.').Last(), figure.Area);
                 }
             }
         }

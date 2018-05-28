@@ -12,7 +12,7 @@ using Rectangle = WindowsFormsApplication1.Figures.Rectangle;
 
 namespace WindowsFormsApplication1
 {
-    public partial class Figure_Form : Form
+    public partial class FigureForm : Form
     {
         /// <summary>
         /// Is 'Modify Figure' button clicked or not
@@ -26,10 +26,10 @@ namespace WindowsFormsApplication1
 		/// Figure index in data grid inside main form
 		/// </summary>
 		
-        public Figure_Form()
+        public FigureForm()
         {
             InitializeComponent();
-            button1.Text = "Add figure";
+            addButton.Text = "Add figure";
             ModifyButtonClicked = false;
 
            
@@ -38,20 +38,20 @@ namespace WindowsFormsApplication1
         public IFigure Figure {
             get
             {
-                if (comboBox1.SelectedIndex == 0)
+                if (selectorComboBox.SelectedIndex == 0)
                 {
                     var circle = new Circle();
                     circle.Radius = Convert.ToDouble(textBox1.Text);
                     return circle;
                 }
-                if (comboBox1.SelectedIndex == 1)
+                if (selectorComboBox.SelectedIndex == 1)
                 {
                     var triangle = new Triangle();
                     triangle.Catet = Convert.ToDouble(textBox2.Text);
                     triangle.Height = Convert.ToDouble(textBox1.Text);
                     return triangle;
                 }
-                if (comboBox1.SelectedIndex == 2)
+                if (selectorComboBox.SelectedIndex == 2)
                 {
                     var rectangle = new Rectangle();
                     rectangle.Height = Convert.ToDouble(textBox1.Text);
@@ -60,17 +60,14 @@ namespace WindowsFormsApplication1
                 }
                 return null;
             }
-            set
-            {
 
-            }
            
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void selectorComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
           
-            if (comboBox1.SelectedIndex == 0)
+            if (selectorComboBox.SelectedIndex == 0)
             {
                 label2.Visible = true;
                 textBox1.Visible = true;
@@ -80,7 +77,7 @@ namespace WindowsFormsApplication1
 
             }
 
-            if (comboBox1.SelectedIndex == 1)
+            if (selectorComboBox.SelectedIndex == 1)
             {
                 label2.Visible = false;
                 label4.Visible = true;
@@ -89,7 +86,7 @@ namespace WindowsFormsApplication1
                 textBox1.Visible = true;
             }
 
-            if (comboBox1.SelectedIndex == 2)
+            if (selectorComboBox.SelectedIndex == 2)
             {
                 label3.Visible = true;
                 textBox1.Visible = true;

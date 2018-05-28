@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class Figure_Form
+    partial class FigureForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.selectorComboBox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.addButton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -50,19 +50,19 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Figure:";
             // 
-            // comboBox1
+            // selectorComboBox
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.selectorComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.selectorComboBox.FormattingEnabled = true;
+            this.selectorComboBox.Items.AddRange(new object[] {
             "Circle",
             "Triangle",
             "Rectangle"});
-            this.comboBox1.Location = new System.Drawing.Point(107, 24);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(100, 21);
-            this.comboBox1.TabIndex = 1;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.selectorComboBox.Location = new System.Drawing.Point(107, 24);
+            this.selectorComboBox.Name = "selectorComboBox";
+            this.selectorComboBox.Size = new System.Drawing.Size(100, 21);
+            this.selectorComboBox.TabIndex = 1;
+            this.selectorComboBox.SelectedIndexChanged += new System.EventHandler(this.selectorComboBox_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -83,15 +83,15 @@
             this.textBox1.Visible = false;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // button1
+            // addButton
             // 
-            this.button1.Location = new System.Drawing.Point(12, 205);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 44);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Modify Figure";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.addFigure_Click);
+            this.addButton.Location = new System.Drawing.Point(12, 205);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(75, 44);
+            this.addButton.TabIndex = 4;
+            this.addButton.Text = "Modify Figure";
+            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.addFigure_Click);
             // 
             // button2
             // 
@@ -157,12 +157,12 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.addButton);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.selectorComboBox);
             this.Controls.Add(this.label1);
-            this.Name = "Figure_Form";
+            this.Name = "FigureForm";
             this.Text = "Figure";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -172,10 +172,10 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox selectorComboBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Button button2;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.TextBox textBox2;

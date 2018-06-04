@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.SelectorComboBox = new System.Windows.Forms.ComboBox();
             this.figureLabel = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -36,14 +36,14 @@
             this.downLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // SelectorComboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(119, 25);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 0;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.SelectorComboBox.FormattingEnabled = true;
+            this.SelectorComboBox.Location = new System.Drawing.Point(119, 25);
+            this.SelectorComboBox.Name = "SelectorComboBox";
+            this.SelectorComboBox.Size = new System.Drawing.Size(121, 21);
+            this.SelectorComboBox.TabIndex = 0;
+            this.SelectorComboBox.SelectedIndexChanged += new System.EventHandler(this.selectorComboBox_SelectedIndexChanged);
             // 
             // figureLabel
             // 
@@ -97,7 +97,7 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.figureLabel);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.SelectorComboBox);
             this.Name = "ObjectControl";
             this.Size = new System.Drawing.Size(267, 165);
             this.ResumeLayout(false);
@@ -107,7 +107,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox SelectorComboBox;
         private System.Windows.Forms.Label figureLabel;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;

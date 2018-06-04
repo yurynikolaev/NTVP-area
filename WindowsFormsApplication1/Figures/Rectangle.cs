@@ -82,10 +82,6 @@ namespace WindowsFormsApplication1.Figures
             }
         }
 
-        //double IFigure.Area
-        //{
-        //    get { return _figureImplementation.Area; }
-        //    set { _figureImplementation.Area = value; }
-        //}
+        public object Weight { get; internal set; }
     }
 }
